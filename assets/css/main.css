@@ -1,6 +1,6 @@
-html {scroll-behavior : smooth;}
+html {scroll-behavior: smooth;}
 
-p {text-indent : 1.5em;}
+p {text-indent: 1.5em;}
 
 td {
     text-align: left;
@@ -12,3 +12,7 @@ th {
     text-align: left;
     vertical-align: text-top;
 }
+
+ul {margin-top: 2px;}
+
+h1 {margin-bottom: 10px;}
