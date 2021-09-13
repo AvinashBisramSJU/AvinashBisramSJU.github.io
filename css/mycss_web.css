@@ -1,1 +1,52 @@
-/*Some random stuff*/
+/* mycss_web.css */
+
+html {scroll-behavior: smooth;}
+
+h1 {margin-bottom: 10px;}
+
+p {text-indent: 1.5em;}
+
+td {
+    text-align: left;
+    vertical-align: text-top;
+}
+
+th {
+    padding-right: 30px;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+ul {margin-top: 2px;}
+
+.blue_background {
+    background-color:rgb(68, 139, 238);
+}
+
+div.sticky {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 123, 0)
+}
+
+body > div {
+    display: grid;
+}
+
+/*
+div
+span
+ul
+li
+img
+table
+form
+h1
+p
+a
+
+*/
+
+/*
+- Might want to set Menu position to "sticky"
+*/
