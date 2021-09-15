@@ -1,0 +1,29 @@
+/*  experiment_web.css */
+
+.width-onethird {grid-column:1/2; grid-row:1/2;}
+
+.width-twothird {grid-column:2/3; grid-row:1/2;}
+
+.width-threethird {grid-column:1/3; grid-row:2/3;}
+
+.width-onethird, .width-twothird, .width-threethird {border: 2px solid black;}
+
+.margin-top {margin-top: 15px;}
+.margin-bottom {margin-bottom: 15px;}
+
+.content-align-center {text-align: center;}
+
+.content-padding {padding: 15px;}
+
+.grid-container {
+    content: "";
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+footer {
+    color: white;
+    background-color:cornflowerblue;
+    border: 1px solid black;
+}
