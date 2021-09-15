@@ -1,29 +1,94 @@
 /*  experiment_web.css */
 
-.width-onethird {grid-column:1/2; grid-row:1/2;}
 
-.width-twothird {grid-column:2/3; grid-row:1/2;}
+/* Element Selectors */
+html {
+    scroll-behavior: smooth;
+}
 
-.width-threethird {grid-column:1/3; grid-row:2/3;}
-
-.width-onethird, .width-twothird, .width-threethird {border: 2px solid black;}
-
-.margin-top {margin-top: 15px;}
-.margin-bottom {margin-bottom: 15px;}
-
-.content-align-center {text-align: center;}
-
-.content-padding {padding: 15px;}
-
-.grid-container {
-    content: "";
-    display: grid;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+body {
+    background-color:#d7d7d7;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
     color: white;
     background-color:cornflowerblue;
     border: 1px solid black;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+td {padding-left: 5px;}
+
+hr {
+    color: #d7d7d7;
+    background-color: #d7d7d7;
+    border-width: 0;
+    height: 1px;
+}
+
+#education_section > ul{
+    margin-top: 5px;
+}
+
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 33.33333% 66.66666%;
+}
+
+
+/* Grid Items */
+div.grid-container > div {
+    background-color: white;
+    color: cornflowerblue;
+    border: 2px solid black;
+    padding: 15px 10px;
+}
+
+div.width-onethird {grid-column:1/2; grid-row:1/2; margin-right: 7.5px;}
+
+div.width-twothird {grid-column:2/3; grid-row:1/2; margin-left: 7.5px;}
+
+div.width-threethird {grid-column:1/3; grid-row:2/3;}
+
+div.menu-container {grid-column:1/3; grid-row:3/4; position:sticky; bottom:0;}
+
+div.width-onethird, div.width-twothird, div.width-threethird {margin-bottom: 15px;}
+
+
+/* Contents of Grid Items */
+div.image-container {margin: -15px -10px 5px;}
+
+div.grid-container > div > div > h1 {margin-bottom: -5px;}
+
+.menu-container > ul > li{
+    display: inline;
+
+}
+
+.menu-container>ul>li::before {
+    content: "\2022"
+}
+
+
+/* Miscellaneous Styling */
+.margin-top {margin-top: 15px;}
+.margin-bottom {margin-bottom: 15px;}
+
+.content-align-center {text-align: center;}
+
+.border-orange {border: 1px solid orange;}
+
+
+/* PHONE MODE */
+@media (max-width: 620px) {
+    body {
+        background-color: red;
+    }
 }
