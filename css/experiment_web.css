@@ -31,6 +31,10 @@ hr {
     height: 1px;
 }
 
+input[type="text"] {
+    margin-bottom: 2.5px;
+}
+
 #education_section > ul{
     margin-top: 5px;
 }
@@ -65,7 +69,7 @@ div.width-onethird, div.width-twothird, div.width-threethird {margin-bottom: 15p
 /* Contents of Grid Items */
 div.image-container {margin: -15px -10px 5px;}
 
-div.grid-container > div > div > h1 {margin-bottom: -5px;}
+div.grid-container > div > div > h1 {margin-bottom: -5px; margin-top: 5px; font-size: 1.65em;}
 
 .menu-container > ul > li{
     display: inline;
@@ -74,6 +78,30 @@ div.grid-container > div > div > h1 {margin-bottom: -5px;}
 
 .menu-container>ul>li::before {
     content: "\2022"
+}
+
+div.experience-level {
+    border: 1px solid #d7d7d7;
+    width:100%;
+    border-radius: 15px;
+    height:20px;
+    background-color: #d7d7d7;
+    margin-bottom: 5px;
+}
+
+div.experience-fill {
+    border: 1px solid cornflowerblue;
+    border-radius: 15px;
+    height: 15px;
+    background-color: cornflowerblue;
+    margin: -1px 0px 0px;
+    color: white;
+    padding: 2.5px 0px;
+}
+
+div#program_skills_section > ul > li {
+    display: block;
+    margin-bottom: 2.5px;
 }
 
 
