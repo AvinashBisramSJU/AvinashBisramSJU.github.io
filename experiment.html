@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="css/experiment_web.css" />
         <!-- <link rel="stylesheet" href="css/mycss_web.css" /> -->
         <link rel="stylesheet" href="css/mycss_tablet.css" media="max-width:645px" />
+        <style>
+            div#contact_section>form>* {
+                display: inline;
+            }
+        </style>
         <title>Experiment Page</title>
     </head>
 
@@ -25,17 +30,17 @@
                         <img src="/images/AvinashBisram_Headshot.jpg" alt="Head Shot of Avinash Bisram" style="width:100.5%; margin:-1px;"/>
                     </div>
                     <div>
-                        <table>
+                        <table id="basic-info-table">
                             <tr>
-                                <th>Name:</th>
+                                <th class="dark-blue">Name:</th>
                                 <td>Avinash Bisram</td>
                             </tr>
                             <tr>
-                                <th>Major:</th>
+                                <th class="dark-blue">Major:</th>
                                 <td>Computer Science</td>
                             </tr>
                             <tr>
-                                <th>Minor:</th>
+                                <th class="dark-blue">Minor:</th>
                                 <td>N/A</td>
                             </tr>
                         </table>
@@ -104,6 +109,12 @@
                                 <ul>
                                     <li>In this milestone, I created and deployed a simple HTML page to act as my personal profile page for this course.</li>
                                 </ul>
+                            </li>
+                            <li><a href="https://avinashbisramsju.github.io">Project 1 - Milestone 2</a>
+                                <ul>
+                                    <li>In this milestone, I styled my profile page using CSS and incorporated the principles of responsive design.</li>
+                                </ul>
+
                             </li>
                         </ul>
                     </div>
@@ -181,12 +192,12 @@
                     <div id="contact_section">
                         <h1 style="margin-bottom:5px;">Contact Me</h1>
                         <t>Inquiries? Type your name and email, and I will get back to you soon!</t>
-                        <form action="index.html" style="padding-top:5px;">
-                            <label for="fname">First Name:</label><br>
+                        <form action="index.html" style="margin-top:5px;">
+                            <label for="fname">First Name:</label>
                             <input type="text" id="fname" name="fname"/><br>
-                            <label for="lname">Last Name:</label><br>
-                            <input type="text" id="lname" name="lname"/><br>
-                            <label for="email_address">Email:</label><br>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname"/>
+                            <label for="email_address">Email:</label>
                             <input type="email" id="email_address" name="email_address" />
                             <input type="submit"/>
                         </form>
@@ -199,7 +210,7 @@
 
                 <!-- Menu Container-->
                 <div class="menu-container" style="padding:5px; margin-bottom:2px;"> <!-- MARGIN BOTTOM HERE FOR TESTING -->
-                    <t class="content-align-center" style="display:block">Menu:</t> 
+                    <t class="content-align-center dark-blue" style="display:block;">Menu:</t> 
                     <ul class="content-align-center" style="padding:0; margin-top:0px;">
                         <li><a href="#basic_info_section">Basic Information</a></li>
                         <li><a href="#education_section">Education</a></li>
