@@ -3,12 +3,18 @@
 
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/experiment_web.css" />
+        <link rel="stylesheet" href="css/mycss_web.css" />
         <!-- <link rel="stylesheet" href="css/mycss_web.css" /> -->
-        <link rel="stylesheet" href="css/mycss_tablet.css" media="max-width:645px" />
+        <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width:645px)" />
         <style>
+            body {
+                background-color:#7e7e7e;
+                font-family: Arial, Helvetica, sans-serif;
+                max-width: 1400px;
+                margin: 15px auto;
+            }
             div#contact_section>form>* {
-                display: inline;
+                display: table;
             }
         </style>
         <title>Experiment Page</title>
@@ -27,7 +33,7 @@
                     
                     <!-- Basic Information Section -->
                     <div class="image-container" id="basic_info_section">
-                        <img src="/images/AvinashBisram_Headshot.jpg" alt="Head Shot of Avinash Bisram" style="width:100.5%; margin:-1px;"/>
+                        <img src="/images/AvinashBisram_Headshot.jpg" alt="Head Shot of Avinash Bisram" />
                     </div>
                     <div>
                         <table id="basic-info-table">
@@ -103,7 +109,7 @@
 
                     <!-- Course Projects Section -->
                     <div id="course_projects_section">
-                        <h1 class="blue_background" >My Projects in this Course</h1>
+                        <h1 >My Projects in this Course</h1>
                         <ul>
                             <li><a href="https://avinashbisramsju.github.io">Project 1 - Milestone 1</a>
                                 <ul>
@@ -114,7 +120,6 @@
                                 <ul>
                                     <li>In this milestone, I styled my profile page using CSS and incorporated the principles of responsive design.</li>
                                 </ul>
-
                             </li>
                         </ul>
                     </div>
@@ -128,7 +133,7 @@
                     <div id="general_interest_section"> 
                         <h1>General Interests</h1>
                         <p>Outside of school I am a personal trainer and coach. Reflective of that are my interests in learning exercise science, with an emphasis on muscle hypertrophy and fat loss. I enjoy reading research papers on interesting topics as well as training in the gym while pursuing recreational bodybuilding.</p>
-                        <p>I also enjoy watching anime in my free time. My personal favorites are <strong><span style="color:black;"><em>Black Clover</em></span></strong>, <strong><span style="color:mediumvioletred"><em>Mob Psycho 100</em></span></strong>, and <strong><span style="color:red"><em>Hunter x Hunter</em></span></strong>.</p>
+                        <p>I also enjoy watching anime in my free time. My personal favorites are <span style="color:black;"><em>Black Clover</em></span>, <span style="color:mediumvioletred"><em>Mob Psycho 100</em></span>, and <span style="color:red"><em>Hunter x Hunter</em></span>.</p>
                     </div>
                     <hr>
 
@@ -227,7 +232,6 @@
             <!-- END Grid Container-->
             </div>
 
-            
         <!-- END Page Container-->
         </div>
             

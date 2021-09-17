@@ -1,3 +1,18 @@
 /* mycss_tablet.css */
 
 html {scroll-behavior: smooth;}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+div.width-onethird {grid-column:1; grid-row:1; margin-right: auto;}
+
+div.width-twothird {grid-column:1; grid-row:2; margin-left: auto;}
+
+div.width-threethird {grid-column:1; grid-row:3;}
+
+div.menu-container {grid-column:1; grid-row:4; position:sticky; bottom:0;}
+
+.width-fourth, .width-threefourth, input[type=submit] {width:100%;}
