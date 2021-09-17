@@ -102,6 +102,11 @@ form {margin-top:5px;}
 }
 
 #basic_info_section > img {width:100.5%; margin:-1px;}
+.border-collapse {border-collapse: collapse;}
+th.dark-blue {text-align:left;}
+#media-table>tr>th {text-align:left;}
+.small-width {width:15%}
+.smaller-width {text-align:left; width:7.5%; padding-right:15px;}
 
 
 .margin-top {margin-top: 15px;}
