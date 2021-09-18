@@ -98,9 +98,7 @@ form {margin-top:5px;}
     margin-bottom: 2.5px;
 }
 
-#course_projects_section>ul>li {
-    margin-bottom:10px;
-}
+#course_projects_section>ul>li {margin-bottom:10px;}
 
 #basic_info_section > img {width:100.5%; margin:-1px;}
 .border-collapse {border-collapse: collapse;}
