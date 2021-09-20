@@ -3,35 +3,34 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/mycss_web.css"/>
-        <!-- <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width:645px)"/> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <style>
+            a {text-decoration: underline;}
             body {
                 background-color:#7e7e7e;
                 font-family: Arial, Helvetica, sans-serif;
                 margin: 15px auto;
             }
+            h1 {
+                font-weight: bold;
+                font-size: 1.65em;
+            }
+            input[type=text],input[type=email] {height:1.5em}
             .container {
                 background-color:#7e7e7e;
                 max-width: 1400px;
                 color: cornflowerblue;
             }
+            .experience-fill {height:20px; padding-top:0px; padding-bottom:2.5px; margin-left:-1px; margin-bottom:1px;}
+            .experience-level {height:21px;}
+            .image-container {margin:0px -15px;}
             .row {
                 margin-bottom: 15px;
                 background-color: white;
             }
-            h1 {
-                font-weight: bold;
-                font-size: 1.65em;
-            }
-            a {text-decoration: underline;}
-            #menu-container > ul > li {display: inline;}
-            #menu-container>ul>li::before {content: "\2022"}
-            .experience-level {height:21px;}
-            .experience-fill {height:20px; padding-top:0px; padding-bottom:2.5px; margin-left:-1px; margin-bottom:1px;}
             #footer {
                 color: white;
                 background-color:cornflowerblue;
@@ -39,14 +38,12 @@
                 box-shadow: 0px 0px 10px 2px #888888;
                 text-align: center;
             }
-            .image-container {margin:0px -15px;}
-            @media (min-width:576px) {
-                .col-sm-4 {border-right: 7.5px solid #7e7e7e;}
-                .col-sm-8 {border-left: 7.5px solid #7e7e7e;}
-            }
+            #menu-container > ul > li {display: inline;}
+            #menu-container>ul>li::before {content: "\2022"}
             @media (max-width:576px) {
                 .form-row>div>label {margin-bottom:0px;}
                 .col-sm-8 {border-top: 15px solid #7e7e7e}
+                input[type=submit] {width:100%}
             }
             @media (min-width:576px) and (max-width:650px) {
                 #program_skills_section>h1{font-size:4vw;} 
@@ -54,6 +51,10 @@
             @media (min-width:576px) and (max-width:700px) {
                 .experience-fill {font-size:0.85em;}
             }  
+            @media (min-width:576px) {
+                .col-sm-4 {border-right: 7.5px solid #7e7e7e;}
+                .col-sm-8 {border-left: 7.5px solid #7e7e7e;}
+            }
         </style>
         <title>Avinash Profile Page</title>
     </head>
@@ -70,7 +71,7 @@
                     
                     <!-- Basic Information Section -->
                     <div class="image-container" id="basic_info_section">
-                        <img src="/images/AvinashBisram_Headshot.jpg" alt="Head Shot of Avinash Bisram"/>
+                        <img class="img-fluid" src="/images/AvinashBisram_Headshot.jpg" alt="Head Shot of Avinash Bisram" style="margin-left:0.5px;"/>
                     </div>
                     <div>
                         <table class="border-collapse">
@@ -238,31 +239,31 @@
                         <t>Inquiries? Type your name and email, and I will get back to you soon!</t>
                         <form action="bootstrap.html">
                         <div class="form-row">
-                            <div class="width-fourth">
+                            <div class="col-sm-3">
                                 <label for="fname">First Name:</label>
                             </div>
-                            <div class="width-threefourth">
+                            <div class="col-sm-9">
                                 <input type="text" id="fname" name="fname"/>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="width-fourth">
+                            <div class="col-sm-3">
                                 <label for="lname">Last Name:</label>
                             </div>
-                            <div class="width-threefourth">
+                            <div class="col-sm-9">
                                 <input type="text" id="lname" name="lname"/>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="width-fourth">
+                            <div class="col-sm-3">
                                 <label for="email_address">Email:</label>
                             </div>
-                            <div class="width-threefourth">
+                            <div class="col-sm-9">
                                 <input type="email" id="email_address" name="email_address" />
                             </div>
                         </div>
                         <div class="form-row">
-                            <input type="submit" style="margin-bottom: 15px;"/>
+                            <div class="col"><input type="submit" style="margin-bottom: 15px;"/></div>                            
                         </div>
                         </form>
                     </div>
