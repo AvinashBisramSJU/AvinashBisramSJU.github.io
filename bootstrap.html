@@ -19,8 +19,6 @@
                 max-width: 1400px;
                 color: cornflowerblue;
             }
-            .col-sm-4 {border-right: 7.5px solid #7e7e7e;}
-            .col-sm-8 {border-left: 7.5px solid #7e7e7e;}
             .row {
                 margin-bottom: 15px;
                 background-color: white;
@@ -42,8 +40,13 @@
                 text-align: center;
             }
             .image-container {margin:0px -15px;}
+            @media (min-width:576px) {
+                .col-sm-4 {border-right: 7.5px solid #7e7e7e;}
+                .col-sm-8 {border-left: 7.5px solid #7e7e7e;}
+            }
             @media (max-width:576px) {
                 .form-row>div>label {margin-bottom:0px;}
+                .col-sm-8 {border-top: 15px solid #7e7e7e}
             }
             @media (min-width:576px) and (max-width:650px) {
                 #program_skills_section>h1{font-size:4vw;} 
