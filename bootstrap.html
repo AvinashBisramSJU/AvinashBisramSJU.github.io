@@ -19,9 +19,8 @@
                 max-width: 1400px;
                 color: cornflowerblue;
             }
-            .col-sm-4, .col-sm-8, .col-sm {
-                border: 1px solid black;
-            }
+            .col-sm-4 {border-right: 7.5px solid #7e7e7e;}
+            .col-sm-8 {border-left: 7.5px solid #7e7e7e;}
             .row {
                 margin-bottom: 15px;
                 background-color: white;
@@ -30,8 +29,17 @@
                 font-weight: bold;
                 font-size: 1.65em;
             }
+            a {text-decoration: underline;}
             #menu-container > ul > li {display: inline;}
             #menu-container>ul>li::before {content: "\2022"}
+            .experience-fill {box-sizing:content-box; height:15px; padding-top:0px; padding-bottom:5px;}
+            #footer {
+                color: white;
+                background-color:cornflowerblue;
+                padding: 10px;
+                box-shadow: 0px 0px 10px 2px #888888;
+                text-align: center;
+            }
         </style>
         <title>Avinash Profile Page</title>
     </head>
@@ -98,7 +106,7 @@
                     
                     <!-- Education Section -->
                     <div id="education_section">
-                        <h1>Education</h1>
+                        <h1 style="padding-top: 15px;">Education</h1>
                         <p>I attended Queens Highschool for the Sciences from 2015 to 2019. I started my studies at St. John's University in Fall of 2019 and expect to graduate in 2023 with a B.S degree in Computer Science. I am also a part of the Honors Program at SJU and currently retain the Presidential Scholarship.</p>
                         <strong>Degrees/Diplomas:</strong>
                         <ul>
@@ -122,14 +130,19 @@
                     <div id="course_projects_section">
                         <h1 >My Projects in this Course</h1>
                         <ul>
-                            <li><a href="https://avinashbisramsju.github.io">Project 1 - Milestone 1</a>
+                            <li><a href="https://avinashbisramsju.github.io/index.html">Project 1 - Milestone 1</a>
                                 <ul>
                                     <li>In this milestone, I created and deployed a simple HTML page to act as my personal profile page for this course.</li>
                                 </ul>
                             </li>
-                            <li><a href="https://avinashbisramsju.github.io">Project 1 - Milestone 2</a>
+                            <li><a href="https://avinashbisramsju.github.io/index.html">Project 1 - Milestone 2</a>
                                 <ul>
                                     <li>In this milestone, I styled my profile page using CSS and incorporated the principles of responsive design.</li>
+                                </ul>
+                            </li>
+                            <li><a href="https://avinashbisramsju.github.io/bootstrap.html">Project 1 - Milestone 3</a>
+                                <ul>
+                                    <li>In this milestone, I replicated my website design from Milestone 2 using Bootstrap 4.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -138,12 +151,12 @@
             </div>
 
             <!-- Bottom Section -->
-            <div class="row">
+            <div class="row" style="margin-bottom:0px;">
                 <div class="col-sm">
 
                     <!-- General Interests Section -->
                     <div id="general_interest_section"> 
-                        <h1>General Interests</h1>
+                        <h1 style="padding-top: 15px;">General Interests</h1>
                         <p>Outside of school I am a personal trainer and coach. Reflective of that are my interests in learning exercise science, with an emphasis on muscle hypertrophy and fat loss. I enjoy reading research papers on interesting topics as well as training in the gym while pursuing recreational bodybuilding.</p>
                         <p>I also enjoy watching anime in my free time. My personal favorites are <span style="color:black;"><em>Black Clover</em></span>, <span style="color:mediumvioletred"><em>Mob Psycho 100</em></span>, and <span style="color:red"><em>Hunter x Hunter</em></span>.</p>
                     </div>
@@ -234,8 +247,8 @@
                                 <input type="email" id="email_address" name="email_address" />
                             </div>
                         </div>
-                        <div class="form-row">
-                            <input type="submit"/>
+                        <div>
+                            <input type="submit" style="margin-bottom: 15px;"/>
                         </div>
                         </form>
                     </div>
@@ -243,28 +256,40 @@
             </div>
 
             <!-- Menu Section -->
-            <div class="row" style="position:sticky; bottom:0;" id="menu-container">
+            <div class="row" style="position:sticky; bottom:0; border-top:15px solid #7e7e7e">
                 <div class="col-sm">
-                    <t class="content-align-center dark-blue" style="display:block;">Menu:</t> 
-                    <ul class="content-align-center" style="padding:0; margin-top:0px;">
-                        <li><a href="#basic_info_section">Basic Information</a></li>
-                        <li><a href="#program_skills_section">Programming Skills</a></li>
-                        <li><a href="#education_section">Education</a></li>
-                        <li><a href="#work_experience_section">Work Experience</a></li>
-                        <li><a href="#course_projects_section">My Projects in this Course</a></li>
-                        <li><a href="#general_interest_section">General Interests</a></li>
-                        <li><a href="#favorite_website_section">Favorite Websites</a></li>
-                        <li><a href="#favorite_media_section">Favorite Song, Film, and TV Show</a></li>
-                        <li><a href="#contact_section">Contact Me</a></li>
-                    </ul>
+                    <t class="content-align-center dark-blue" style="display:block; padding-top:5px;">Menu:</t> 
+                    <div class="col" id="menu-container">
+                        <ul class="content-align-center" style="padding:0; margin-top:0px;">
+                            <li><a href="#basic_info_section">Basic Information</a></li>
+                            <li><a href="#program_skills_section">Programming Skills</a></li>
+                            <li><a href="#education_section">Education</a></li>
+                            <li><a href="#work_experience_section">Work Experience</a></li>
+                            <li><a href="#course_projects_section">My Projects in this Course</a></li>
+                            <li><a href="#general_interest_section">General Interests</a></li>
+                            <li><a href="#favorite_website_section">Favorite Websites</a></li>
+                            <li><a href="#favorite_media_section">Favorite Song, Film, and TV Show</a></li>
+                            <li><a href="#contact_section">Contact Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" id="footer">
+                    <t>Find me on:</t><br>
+            <a target="_blank" href="https://github.com/AvinashBisramSJU"><img width="15" height="15" alt="Github Icon" src="https://image.flaticon.com/icons/png/512/25/25231.png" /></a>
                 </div>
             </div>
         </div>
 
-        <footer class="content-align-center margin-top">
+        
+
+
+        <!-- <footer class="content-align-center margin-top">
             <t>Find me on:</t><br>
             <a target="_blank" href="https://github.com/AvinashBisramSJU"><img width="15" height="15" alt="Github Icon" src="https://image.flaticon.com/icons/png/512/25/25231.png" /></a>
-        </footer>
+        </footer> -->
 
     </body>
 </html>
