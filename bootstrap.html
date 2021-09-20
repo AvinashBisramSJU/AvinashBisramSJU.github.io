@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/mycss_web.css"/>
-        <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width:645px)"/>
+        <!-- <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width:645px)"/> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -32,7 +32,8 @@
             a {text-decoration: underline;}
             #menu-container > ul > li {display: inline;}
             #menu-container>ul>li::before {content: "\2022"}
-            .experience-fill {box-sizing:content-box; height:15px; padding-top:0px; padding-bottom:5px;}
+            .experience-level {height:21px;}
+            .experience-fill {height:20px; padding-top:0px; padding-bottom:2.5px; margin-left:-1px; margin-bottom:1px;}
             #footer {
                 color: white;
                 background-color:cornflowerblue;
@@ -40,6 +41,16 @@
                 box-shadow: 0px 0px 10px 2px #888888;
                 text-align: center;
             }
+            .image-container {margin:0px -15px;}
+            @media (max-width:576px) {
+                .form-row>div>label {margin-bottom:0px;}
+            }
+            @media (min-width:576px) and (max-width:650px) {
+                #program_skills_section>h1{font-size:4vw;} 
+            }
+            @media (min-width:576px) and (max-width:700px) {
+                .experience-fill {font-size:0.85em;}
+            }  
         </style>
         <title>Avinash Profile Page</title>
     </head>
@@ -61,8 +72,8 @@
                     <div>
                         <table class="border-collapse">
                             <tr>
-                                <th class="dark-blue small-width">Name:</th>
-                                <td>Avinash Bisram</td>
+                                <th class="dark-blue small-width" style="padding-top:10px;">Name:</th>
+                                <td style="padding-top:10px;">Avinash Bisram</td>
                             </tr>
                             <tr>
                                 <th class="dark-blue small-width">Major:</th>
@@ -247,7 +258,7 @@
                                 <input type="email" id="email_address" name="email_address" />
                             </div>
                         </div>
-                        <div>
+                        <div class="form-row">
                             <input type="submit" style="margin-bottom: 15px;"/>
                         </div>
                         </form>
@@ -282,14 +293,5 @@
                 </div>
             </div>
         </div>
-
-        
-
-
-        <!-- <footer class="content-align-center margin-top">
-            <t>Find me on:</t><br>
-            <a target="_blank" href="https://github.com/AvinashBisramSJU"><img width="15" height="15" alt="Github Icon" src="https://image.flaticon.com/icons/png/512/25/25231.png" /></a>
-        </footer> -->
-
     </body>
 </html>
