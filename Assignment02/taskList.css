@@ -1,0 +1,91 @@
+/* taskList.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(226,229,237);
+    margin: 15px;
+    box-shadow: 0px 0px 10px 2px rgb(175, 175, 175);
+}
+
+hr {
+    margin: 16px -15px;
+    border-color: rgb(175, 175, 175);
+}
+
+label {
+    margin-bottom: 0px;
+    margin-left: -5px;
+}
+
+div.form-row {
+    margin: 2.5px 0px;
+}
+
+.checkbox {
+    vertical-align: middle;
+    margin: 10px;
+    margin-left: 12.5px;
+}
+
+.container {
+    padding: 15px 15px 0px;
+    background-color: white;
+    border: 1px solid rgb(237,240,246);
+    margin: 0px;
+    max-width: 1504px;
+    align-self: center;   
+}
+
+.displayed-task-priority {
+    float: right;
+    padding-top: 2.5px;
+}
+
+.displayed-task-title {
+    padding-top: 2.5px;
+}
+
+.remove {
+    color: gray;
+    background: white;
+    border: 1px gray solid;
+    margin: 5px 0px;
+    font-size: x-small;
+    font-weight: bold;
+    border-radius: 10px;
+    float: right;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.remove:hover {
+    color: black;
+    border-color: black;
+}
+
+
+#task-list {
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+#task-list>li {
+    padding: 5px;
+    border: 1px solid rgb(237,240,246);
+    margin-left: -55px;
+    margin-right: -15px;
+    padding-bottom: 0px;
+}
+
+#task-list>li:hover {
+    border: 1.05px solid cornflowerblue;
+}
+
+#task-list>li>button {
+    float: right;
+}
+
+#task-priority {
+    height:30px;
+}
