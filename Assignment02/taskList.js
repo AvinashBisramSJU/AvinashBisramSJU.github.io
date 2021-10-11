@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded',function() {
         let task_priority = document.querySelector("#task-priority").value;
         li.innerHTML = `
             <input class="checkbox" type="checkbox">
-            <t class="displayed-task-title">${task_title}</t>
+            <p class="displayed-task-title">${task_title}</p>
             <button class="remove">Remove</button>
             <span class="displayed-task-priority" style="color:${pickColor(task_priority)}">${task_priority} Priority </span>
             `        
