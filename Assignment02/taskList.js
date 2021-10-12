@@ -33,19 +33,46 @@ document.addEventListener('DOMContentLoaded',function() {
         });
     }
 
+    // Changing the inital text-decoration based on task-status
+    function radioDec() {
+        let status = document.querySelector("#pending").checked;
+        return ((!status)?"line-through":"none");
+    }
+
+    // Changing the initial checkbox state based on task-status
+    function radioCheck(element) {
+        let status = document.querySelector("#pending").checked;
+        if (!status) {
+            element.querySelector(".checkbox").checked = true;
+        }
+    }
+
+    // Returns the name representation based on task-status
+    function radioChoice() {
+        if (document.querySelector("#pending").checked == true) {
+            return "pending";
+        }
+        else {
+            return "completed";
+        }
+    }
+
     // Upon submitting a new task...
     document.querySelector("#add-task").onsubmit = () => {
         // Grab values of input fields and create a new <li> element with that data
         let li = document.createElement('li');
         let task_title = document.querySelector("#task-title").value;
         let task_priority = document.querySelector("#task-priority").value;
+        let task_status = radioChoice();
+        /* alert(task_status); */
         li.innerHTML = `
             <input class="checkbox" type="checkbox">
-            <p class="displayed-task-title">${task_title}</p>
+            <p class="displayed-task-title" style="text-decoration:${radioDec()}">${task_title}</p>
             <button class="remove">Remove</button>
             <span class="displayed-task-priority" style="color:${pickColor(task_priority)}">${task_priority} Priority </span>
             `        
         
+        radioCheck(li);
         document.querySelector("#task-list").append(li); // Appending to the displayed task list
         all_tasks.push(li) // Pushing to the local all_tasks array
 
@@ -63,7 +90,9 @@ document.addEventListener('DOMContentLoaded',function() {
         })
 
         document.querySelector("#task-title").value = ''; // Resetting the "Task Title" input box
+        document.querySelector("#task-priority").value = "High"; // Resetting the "Task Priority" box
         document.querySelector("#submit").disabled = true; // Disabling the submit button again
+        document.querySelector("#pending").checked = "true"; // Resetting the "Task Status" to pending
 
         return false; // Stopping the page from reloading
     }
