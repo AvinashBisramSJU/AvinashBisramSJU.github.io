@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Application</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="quizApp.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="quizApp.js"></script>
+    </head>
+    <body>
+        <div id="page_container" style="margin:100px">
+            
+        </div>
+    </body>
+
+    <!-- Handlebar Template Scripts -->
+
+    <script id="intro_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1>Hello! Welcome to the Comp Sci Quiz Application!</h1>
+                        <span>User Information:</span>
+                        <form id="user_info_form"> 
+                            <div class="form_row">
+                                <div class="col-sm-3"><label for="fname">First Name:</label></div>
+                                <div class="col-sm-9"><input id="fname" type="text" placeholder="First Name"></div>
+                            </div>
+                            <div class="form_row">
+                                <div class="col-sm-3"><label for="lname">Last Name:</label></div>
+                                <div class="col-sm-9"><input id="lname" type="text" placeholder="Last Name"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-3"><label>Desired Quiz</label></div>
+                                <div class="col-sm-9" id="radio-form">
+                                    <input type="radio" name="desired_quiz" value="python" checked="true" id="python"> Quiz 1 (Python)<br>
+                                    <input type="radio" name="desired_quiz" value="sql"> Quiz 2 (SQL)
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-3"></div>
+                                <div class="col"><button data-action="{{this.action}}">Start Quiz</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="true_false_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span>{{this.questionText}}</span>
+                        <button data-action="answer" data-answer="{{this.options.[0]}}">{{this.options.[0]}}</button>
+                        <button data-action="answer" data-answer="{{this.options.[1]}}">{{this.options.[1]}}</button><br>
+                        <button data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="multiple_choice_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span>{{this.questionText}}</span>
+                        <form id="multiple_choice_form">
+                            <div class="form_row">
+                                <div class="col">
+                                    <input type="radio" name="desired_choice" value="{{this.options.[0]}}">{{this.options.[0]}}<br>
+                                    <input type="radio" name="desired_choice" value="{{this.options.[1]}}">{{this.options.[1]}}<br>
+                                    <input type="radio" name="desired_choice" value="{{this.options.[2]}}">{{this.options.[2]}}<br>
+                                    <input type="radio" name="desired_choice" value="{{this.options.[3]}}">{{this.options.[3]}}<br>
+                                </div>
+                            </div>
+                        </form>
+                        <button data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="text_input_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span class="center">{{this.questionText}}</span>
+                        <input type="text" id="{{this.answerFieldId}}" name="answer">
+                        <button data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="fill_blank_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span class="center">{{this.questionText}}</span>
+                        <input type="text" id="{{this.answerFieldId}}" name="answer">
+                        <button data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="fix_error_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1>Fix the Error!</h1>
+                        <input type="text" id="{{this.answerFieldId}}" value={{this.questionText}}>
+                        <button data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="feedback" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="center" style="color:red;">INCORRECT</span>
+                    <p class="center">{{this.explanation}}</p>
+                    <button class="center" data-action="gotIt" id="gotIt">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="end_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Thank you for taking the quiz!</h1>
+                    <button data-action="retake">Retake the Quiz</button>
+                    <button data-action="return">Return to Start</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+</html>

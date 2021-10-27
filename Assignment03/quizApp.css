@@ -1,0 +1,13 @@
+.col>div {
+    border:1px solid cornflowerblue;
+}
+
+.col>div>* {
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.center {text-align:center;}
