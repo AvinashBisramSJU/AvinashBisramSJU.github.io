@@ -1,9 +1,5 @@
-.col>div {
+.container {
     border:1px solid cornflowerblue;
-}
-
-.col>div>* {
-    border: 1px solid black;
 }
 
 h1 {
@@ -11,3 +7,12 @@ h1 {
 }
 
 .center {text-align:center;}
+
+.col-sm-3 {
+    float: left;
+    clear: left;
+}
+.col-sm-9 {
+    float: right;
+    clear: right;
+}

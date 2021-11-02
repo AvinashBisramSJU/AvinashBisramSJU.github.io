@@ -10,7 +10,7 @@
         {
             "questionType" : "multiple_choice",
             "questionText" : "This is a sample multiple choice question.",
-            "correctAnswer" : 3,
+            "correctAnswer" : "Option Choice 3",
             "options" : [
                 "Option Choice 1",
                 "Option Choice 2",

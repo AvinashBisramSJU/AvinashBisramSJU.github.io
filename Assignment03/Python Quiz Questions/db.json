@@ -1,3 +1,12 @@
 {
+    "questions" : [
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "Which of these is not used for looping?",
+            "options" : ["For", "While", "Recursion", "If"],
+            "correctAnswer" : "Recursion"
+
+        }
+    ]
     
 }
