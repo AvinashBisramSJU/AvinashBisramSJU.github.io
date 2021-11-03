@@ -10,7 +10,7 @@
                 "Structured Question Language"
             ],
             "correctAnswer" : "Structured Query Language",
-            "explanation" : "SQL is an acronym that strands for Structured Query Language."
+            "explanation" : "SQL is an acronym that stands for Structured Query Language."
         },
         {
             "questionType" : "true_false",
@@ -48,7 +48,7 @@
             "questionType" : "fix_error",
             "questionText" : "Fix this SQL query to select the 'Name' and 'Age' columns from 'myTable':",
             "displayText" : "SELECT Name, FROM myTable;",
-            "correctAnswer" : "SELECT Name, Age FROM myTable",
+            "correctAnswer" : "SELECT Name, Age FROM myTable;",
             "explanation" : "To SELECT multiple columns from a table, place their names after the SELECT keyword and separate them with commas."
         },
         {
@@ -74,7 +74,7 @@
             "questionType" : "fill_blank",
             "questionText" : "Complete the SQL query to select only distinct values in the 'Name' column of 'myTable':",
             "displayText" : "SELECT DISTINCT ____ FROM myTable;",
-            "correctAnswer" : "SELECT DISTINCT Name FROM myTable",
+            "correctAnswer" : "Name",
             "explanation" : "Remember the desired column names should be placed after the SELECT statement (and after modifiers such as DISTINCT)."
         },
         {
@@ -107,7 +107,7 @@
             "questionType" : "fix_error",
             "questionText" : "Correct this SQL Query to filter the 'Name' column only where values are the same as 'Dave':",
             "displayText" : "WHERE Name > Dave;",
-            "correctAnswer" : "WHERE Name = 'Dave';",
+            "correctAnswer" : "WHERE Name = \"Dave\";",
             "explanation" : "The = operator should be used to filter based on the 'equals' condition."
         },
         {
@@ -128,7 +128,7 @@
             "questionType" : "fill_blank",
             "questionText" : "Complete the following SQL query to order myTable by the Name column (ascending):",
             "displayText" : "SELECT * FROM myTable\nORDER BY ____;",
-            "correctAnswer" : "SELECT * FROM myTable\nORDER BY Name;",
+            "correctAnswer" : "Name",
             "explanation" : "The column name should be placed after ORDER BY."
         },
         {
