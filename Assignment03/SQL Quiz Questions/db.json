@@ -1,44 +1,172 @@
 {
-    "questions": [
+    "questions" : [
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "What does SQL stand for?",
+            "options" : [
+                "Standard Question Language",
+                "Structured Query Language",
+                "Standard Query Language",
+                "Structured Question Language"
+            ],
+            "correctAnswer" : "Structured Query Language",
+            "explanation" : "SQL is an acronym that strands for Structured Query Language."
+        },
         {
             "questionType" : "true_false",
-            "questionText" : "This is a sample true/false question.",
-            "correctAnswer" : "true",
-            "options" : ["true","false"],
-            "explanation" : "Incorrect. The correct answer is true because lorem ipsum lorem ipsum."
+            "questionText" : "SQL keywords are case sensitive.",
+            "options" : ["True", "False"],
+            "correctAnswer" : "False",
+            "explanation": "SQL keywords are not case sensitive so writing select does the same as SELECT."
         },
         {
             "questionType" : "multiple_choice",
-            "questionText" : "This is a sample multiple choice question.",
-            "correctAnswer" : "Option Choice 3",
-            "options" : [
-                "Option Choice 1",
-                "Option Choice 2",
-                "Option Choice 3",
-                "Option Choice 4"
+            "questionText" : "Which of these is NOT a SQL keyword?",
+            "options": [
+                "SELECT",
+                "CHANGE",
+                "DELETE",
+                "DROP"
             ],
-            "explanation" : "Incorrect. The correct answer is (insert corect answer choice text here) because loreum ipsum lorem ipsum."
+            "correctAnswer" : "CHANGE",
+            "explanation" : "CHANGE is not a valid keyword in SQL."
         },
         {
             "questionType" : "text_input",
-            "questionText" : "This is a sample text input question.",
-            "correctAnswer" : "answer",
-            "answerFieldId" : "text_answer",
-            "explanation" : "Incorrect. The correct answer is: [answer]. This is because lorem ipsum lorem ipsum."
+            "questionText" : "What SQL keyword is used to select data from a database?",
+            "correctAnswer" : "SELECT",
+            "explanation" : "The SELECT keyword is used to select data from a database."
         },
         {
             "questionType" : "fill_blank",
-            "questionText" : "This a sample fill in the _____ question.",
-            "correctAnswer" : "blank",
-            "answerFieldId" : "fill_answer",
-            "explanation" : "Incorrect. The correct answer is [blank]. This is because lorem ipsum lorem ipsum."
+            "questionText" : "Complete the SQL query to select all available fields from 'myTable':",
+            "displayText" : "SELECT _ FROM myTable",
+            "correctAnswer" : "*",
+            "explanation" : "The * symbol can be used with SELECT statements to select all fields."
         },
         {
             "questionType" : "fix_error",
-            "questionText" : "Fix the erorr in this sentence.",
-            "correctAnswer" : "Fix the error in this sentence.",
-            "answerFieldId" : "error_answer",
-            "explanation" : "Incorrect. The correct answer was to change erorr to error because the word was originally misspelled."
+            "questionText" : "Fix this SQL query to select the 'Name' and 'Age' columns from 'myTable':",
+            "displayText" : "SELECT Name, FROM myTable;",
+            "correctAnswer" : "SELECT Name, Age FROM myTable",
+            "explanation" : "To SELECT multiple columns from a table, place their names after the SELECT keyword and separate them with commas."
+        },
+        {
+            "questionType" : "true_false",
+            "questionText" : "A SQL column can contain duplicate values",
+            "options" : ["True","False"],
+            "correctAnswer" : "True",
+            "explanation" : "Duplicate values are allowed in SQL colums."
+        },
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "What SQL keyword combination is used to select only different values?",
+            "options" : [
+                "SELECT DISTINCT",
+                "SELECT DIFFERENT",
+                "SELECT UNIQUE",
+                "SELECT NOT SAME"
+            ],
+            "correctAnswer" : "SELECT DISTINCT",
+            "explanation" : "The DISTINCT keyword can be used with SELECT to only return the different values from a column."
+        },
+        {
+            "questionType" : "fill_blank",
+            "questionText" : "Complete the SQL query to select only distinct values in the 'Name' column of 'myTable':",
+            "displayText" : "SELECT DISTINCT ____ FROM myTable;",
+            "correctAnswer" : "SELECT DISTINCT Name FROM myTable",
+            "explanation" : "Remember the desired column names should be placed after the SELECT statement (and after modifiers such as DISTINCT)."
+        },
+        {
+            "questionType" : "text_input",
+            "questionText" : "What SQL keyword is used to extract records that satisfy a certain condition?",
+            "correctAnswer" : "WHERE",
+            "explanation" : "The WHERE keyword can be used to filter records from columns if they satisfy the specified condition."
+
+        },
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "Which of the following are not valid operators used in the WHERE Clause?",
+            "options" : [
+                "==",
+                "=",
+                ">",
+                "<>"
+            ],
+            "correctAnswer" : "==",
+            "explanation" : "Unlike in other popular programming languages, SQL uses '=' as the equivalence conditional operator instead of '=='."
+        },
+        {
+            "questionType" : "true_false",
+            "questionText" : "In some versions of SQL <> may be written as != as well.",
+            "options" : ["True", "False"],
+            "correctAnswer" : "True",
+            "explanation" : "Typically it is recommended to use <> as it is most popular but most (not all) modern environments accept != as well."
+        },
+        {
+            "questionType" : "fix_error",
+            "questionText" : "Correct this SQL Query to filter the 'Name' column only where values are the same as 'Dave':",
+            "displayText" : "WHERE Name > Dave;",
+            "correctAnswer" : "WHERE Name = 'Dave';",
+            "explanation" : "The = operator should be used to filter based on the 'equals' condition."
+        },
+        {
+            "questionType" : "true_false",
+            "questionText" : "The ORDER BY keyword is used to sort records in ascending or descending order.",
+            "options": ["True", "False"],
+            "correctAnswer" : "True",
+            "explanation" : "The ORDER BY keyword is used in SQL to sort by one or more columns in a result set."
+        },
+        {
+            "questionType" : "true_false",
+            "questionText" : "The ORDER BY keyword sorts records in descending order by default.",
+            "options" : ["True","False"],
+            "correctAnswer" : "False",
+            "explanation" : "ORDER BY sorts records in ascending order by default."
+        },
+        {
+            "questionType" : "fill_blank",
+            "questionText" : "Complete the following SQL query to order myTable by the Name column (ascending):",
+            "displayText" : "SELECT * FROM myTable\nORDER BY ____;",
+            "correctAnswer" : "SELECT * FROM myTable\nORDER BY Name;",
+            "explanation" : "The column name should be placed after ORDER BY."
+        },
+        {
+            "questionType" : "true_false",
+            "questionText" : "To order a result set by multiple columns, their names can be listed after ORDER BY (separated by commas).",
+            "options" : ["True","False"],
+            "correctAnswer" : "True",
+            "explanation" : "SQL allows result sets to be ordered by multiple columns. The ordering will follow the sequence of the listed column names."
+        },
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "Which of the following SQL queries can be used to delete all records in myTable where 'Age' is greater than 15?",
+            "options" : [
+                "DELETE Age FROM myTable WHERE Age>15;",
+                "DROP RECORDS FROM myTable WHERE Age>15;",
+                "DELETE FROM myTable WHERE Age>15;",
+                "DROP FROM myTable WHERE Age>15;"
+            ],
+            "correctAnswer" : "DELETE FROM myTable WHERE Age>15;",
+            "explanation" : "The DELETE keyword is placed before FROM (similar to SELECT). The table is specified using FROM and the condition for deletion is specified using WHERE."
+        },
+        {
+            "questionType" : "text_input",
+            "questionText" : "What SQL statement is used to group rows that have the same values into 'summary' rows?",
+            "correctAnswer" : "GROUP BY",
+            "explanation" : "The GROUP BY statement gruops rows with same values into 'summary' rows."
+        },
+        {
+            "questionType" : "multiple_choice",
+            "questionText" : "Which of the following is not an example of an aggregate function that can be used with GROUP BY statements?",
+            "options" : [
+                "COUNT()",
+                "MAX()",
+                "MED()",
+                "SUM()"
+            ],
+            "correctAnswer" : "MED()",
+            "explanation" : "MED() is not a valid SQL aggregate function but MAX() and MIN() are."
         }
     ]
 }
