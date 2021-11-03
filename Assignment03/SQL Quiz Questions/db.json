@@ -105,7 +105,7 @@
         },
         {
             "questionType" : "fix_error",
-            "questionText" : "Correct this SQL Query to filter the 'Name' column only where values are the same as 'Dave':",
+            "questionText" : "Correct this SQL Query to filter the 'Name' column only where values are the same as \"Dave\":",
             "displayText" : "WHERE Name > Dave;",
             "correctAnswer" : "WHERE Name = \"Dave\";",
             "explanation" : "The = operator should be used to filter based on the 'equals' condition."
