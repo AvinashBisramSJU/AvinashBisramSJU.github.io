@@ -1,12 +1,111 @@
-.container {
-    border:1px solid cornflowerblue;
+body {
+    background-color: rgb(23,41,81);
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding: 30px 100px;
+    height: 100%;
+    box-sizing: content-box; */
+}
+
+body>* {
+    -ms-transform : translateY(50%);
+    transform : translateY(50%);
+}
+
+button[data-action="start"]{
+    border-radius: 15px;
+    width: 100%;
+    background-color: rgb(23,41,81);
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    -webkit-transition: all 0.25s linear;
+    transition : all 0.25s linear;
+}
+button[data-action="start"]:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+button[data-answer="True"], button[data-answer="False"] {
+    border-radius: 15px;
+    background-color: rgb(23,41,81);
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    width: 25%;
+    margin-top: 15px;
+    -webkit-transition: all 0.25s linear;
+    transition : all 0.25s linear;
+}
+button[data-answer="True"]:hover, button[data-answer="False"]:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+button[data-action="submit"] {
+    width: 25%;
+    border-radius: 15px;
+    border: 1px solid;
+    background-color: rgb(23,41,81);
+    margin-top: 15px;
+    -webkit-transition: all 0.25s linear;
+    transition : all 0.25s linear;
+}
+button[data-action="submit"]:disabled {
+    color: gray;
+}
+button[data-action="submit"]:enabled { 
+    color: green;
+}
+button[data-action="submit"]:enabled:hover {
+    background-color: green;
+    color: white;
+}
+
+button[data-action="retake"], button[data-action="return"] {
+    background-color: rgb(23,41,81);
+    border-radius: 15px;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    -webkit-transition: all 0.25s linear;
+    transition : all 0.25s linear;
+}
+button[data-action="retake"]:hover, button[data-action="return"]:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+hr {
+    background-color: white;
 }
 
 h1 {
     text-align: center;
 }
 
-.center {text-align:center;}
+input[type="radio"] {
+    background-color: cornflowerblue;
+}
+
+input[type="text"] {
+    border: 1px solid cornflowerblue;
+    background-color: rgb(23,41,81);
+    color: cornflowerblue;
+    padding-left: 5px;
+}
+
+input[name="desired_choice"] ~ span {
+    margin-left: 15px;
+}
+
+
+
+
+
+/* .container {
+    border: 1px solid cornflowerblue;
+    color: white;
+    padding: 15px;
+    border-radius : 10px;
+}
 
 .col-sm-3 {
     float: left;
@@ -15,4 +114,100 @@ h1 {
 .col-sm-9 {
     float: right;
     clear: right;
+} */
+
+.multichoices {
+    color: white;
 }
+
+.questionText {
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* .row {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+} */
+
+/* #counter_container {
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+} */
+
+/* #correctAnswer_display {
+    border: 1px solid green;
+    background-color: white;
+    height: 50%;
+} */
+
+#current_score_display {
+    border: 0px solid orange;
+    color: orange;
+    width : 48%;
+    height: 99%;
+    text-align: center;
+}
+
+#elapsed_time_display {
+    border: 0px solid white;
+    color: white;
+    text-align: center;
+}
+
+#fill_blank_span {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+#fname, #lname {
+    background-color: rgb(23,41,81);
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    padding-left: 5px;
+}
+
+#gotIt {
+    background-color: rgb(23,41,81);
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    border-radius: 15px;
+    min-width: 80px;
+}
+
+#gotIt:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#page_container {
+    /* -ms-transform: translateY(35%);
+    transform: translateY(35%); */
+    border: 1px solid cornflowerblue;
+    color: white;
+    padding: 10px 15px 5px;
+    /* box-shadow: 0px 0px 15px 0px white; */
+}
+
+#questions_answered_display {
+    border: 0px solid green;
+    color: green;
+    width : 48%;
+    height: 99%;
+    text-align: center;
+}
+
+/* #scoreboard {
+    padding: 1px;    
+} */
+
+#text_input_box {
+    width: 25%;
+    margin-top: 5px;
+}
+
+/* #totalAnswer_display {
+    border: 1px solid orange;
+    height: 50%;
+    background-color: white;
+} */

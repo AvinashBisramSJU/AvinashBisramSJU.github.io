@@ -128,8 +128,8 @@
         },
         {
             "questionType" : "fill_blank",
-            "questionText" : "Complete the following python code to define a Python function named my_func:",
-            "displayText" : "___ my_func():\n\tprint(\"Hello\")",
+            "questionText" : "Complete the following python code to define a Python function named myFunc:",
+            "displayText" : "___ myFunc():\n\tprint(\"Hello\")",
             "correctAnswer" : "def",
             "explanation" : "The def keyword in Python is used to define new functions."
         },

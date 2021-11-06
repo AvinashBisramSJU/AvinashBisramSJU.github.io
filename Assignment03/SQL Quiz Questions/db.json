@@ -47,7 +47,7 @@
         {
             "questionType" : "fix_error",
             "questionText" : "Fix this SQL query to select the 'Name' and 'Age' columns from 'myTable':",
-            "displayText" : "SELECT Name, FROM myTable;",
+            "displayText" : "SELECT Name, FROM myTable",
             "correctAnswer" : "SELECT Name, Age FROM myTable;",
             "explanation" : "To SELECT multiple columns from a table, place their names after the SELECT keyword and separate them with commas."
         },
@@ -106,7 +106,7 @@
         {
             "questionType" : "fix_error",
             "questionText" : "Correct this SQL Query to filter the 'Name' column only where values are the same as \"Dave\":",
-            "displayText" : "WHERE Name > Dave;",
+            "displayText" : "WHERE Name > Dave",
             "correctAnswer" : "WHERE Name = \"Dave\";",
             "explanation" : "The = operator should be used to filter based on the 'equals' condition."
         },
