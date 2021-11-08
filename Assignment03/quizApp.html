@@ -19,10 +19,10 @@
                 <div id="page_container" class="col-sm-12"></div>
                 <div id="scoreboard" class="col">
                     <div class="row" style="height:50%;">
-                        <div id="questions_answered_display" class="col-sm-6"><span></span></div>
-                        <div id="current_score_display" class="col-sm-6"><span></span></div>
+                        <div id="questions_answered_display" class="col-sm-6 topPadding"><span></span></div>
+                        <div id="current_score_display" class="col-sm-6 topPadding"><span></span></div>
                     </div>
-                    <div class="row" style="height:50%"><div id="elapsed_time_display" class="col-sm-12"><p></p><br><span></span></div></div>
+                    <div class="row" style="height:50%"><div id="elapsed_time_display" class="col-sm-12 topPadding"><p style="margin-bottom: 0px;"></p><br><span></span></div></div>
                 </div>
             </div>
         </div>
@@ -92,8 +92,8 @@
     <script id="fill_blank_view" type="text/x-handlebars-template">
         <h1>Fill the Blank</h1>
         <hr>
-        <span class="center">{{this.questionText}}</span><br>
-        <span id="fill_blank_span">{{this.displayText}}</span><br>
+        <span class="center">{{this.questionText}}</span><br><br>
+        <span id="fill_blank_span">{{this.displayText}}</span><br><br>
         <input type="text" name="answer" autocomplete="off"><br>
         <button data-action="submit" disabled>Submit</button>
     </script>
@@ -102,15 +102,15 @@
         <h1>Fix the Error</h1>
         <hr>
         <span class="center">{{this.questionText}}</span><br>
-        <input type="text" value={{this.displayText}} autocomplete="off"><br>
+        <input type="text" value="{{this.displayText}}" autocomplete="off"><br>
         <button data-action="submit" disabled>Submit</button>
     </script>
 
-    <!-- Not sure how I'm implementing the Good Job! pop-up yet -->
     <script id="feedback_view" type="text/x-handlebars-template">
         <h1 class="center" style="color:red;">INCORRECT</h1>
         <hr>
-        <p class="center">{{this.explanation}}</p>
+        <p id="wrong_answer"></p>
+        <p class="center">Correct Answer: {{this.correctAnswer}}<br><br>Explanation: {{this.explanation}}</p>
         <button class="center" data-action="gotIt" id="gotIt">Got it!</button>
     </script>
 

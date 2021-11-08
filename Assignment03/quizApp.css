@@ -1,12 +1,10 @@
 body {
     background-color: rgb(23,41,81);
     font-family: Arial, Helvetica, sans-serif;
-    /* padding: 30px 100px;
-    height: 100%;
-    box-sizing: content-box; */
 }
 
 body>* {
+    vertical-align: middle;
     -ms-transform : translateY(50%);
     transform : translateY(50%);
 }
@@ -35,7 +33,7 @@ button[data-answer="True"], button[data-answer="False"] {
     -webkit-transition: all 0.25s linear;
     transition : all 0.25s linear;
 }
-button[data-answer="True"]:hover, button[data-answer="False"]:hover {
+button[data-answer="True"]:hover, button[data-answer="True"]:focus, button[data-answer="False"]:hover, button[data-answer="False"]:focus{
     background-color: cornflowerblue;
     color: white;
 }
@@ -99,23 +97,6 @@ input[name="desired_choice"] ~ span {
 
 
 
-
-/* .container {
-    border: 1px solid cornflowerblue;
-    color: white;
-    padding: 15px;
-    border-radius : 10px;
-}
-
-.col-sm-3 {
-    float: left;
-    clear: left;
-}
-.col-sm-9 {
-    float: right;
-    clear: right;
-} */
-
 .multichoices {
     color: white;
 }
@@ -125,21 +106,13 @@ input[name="desired_choice"] ~ span {
     transform: translateX(-50%);
 }
 
-/* .row {
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-} */
+.topPadding {
+    padding-top: 10px;
+}
 
-/* #counter_container {
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);
-} */
 
-/* #correctAnswer_display {
-    border: 1px solid green;
-    background-color: white;
-    height: 50%;
-} */
+
+
 
 #current_score_display {
     border: 0px solid orange;
@@ -153,6 +126,7 @@ input[name="desired_choice"] ~ span {
     border: 0px solid white;
     color: white;
     text-align: center;
+    height: 100%;
 }
 
 #fill_blank_span {
@@ -181,12 +155,9 @@ input[name="desired_choice"] ~ span {
 }
 
 #page_container {
-    /* -ms-transform: translateY(35%);
-    transform: translateY(35%); */
     border: 1px solid cornflowerblue;
     color: white;
     padding: 10px 15px 5px;
-    /* box-shadow: 0px 0px 15px 0px white; */
 }
 
 #questions_answered_display {
@@ -195,19 +166,11 @@ input[name="desired_choice"] ~ span {
     width : 48%;
     height: 99%;
     text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
 }
-
-/* #scoreboard {
-    padding: 1px;    
-} */
 
 #text_input_box {
     width: 25%;
     margin-top: 5px;
 }
-
-/* #totalAnswer_display {
-    border: 1px solid orange;
-    height: 50%;
-    background-color: white;
-} */

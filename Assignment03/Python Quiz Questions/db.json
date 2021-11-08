@@ -42,7 +42,7 @@
             "questionText" : "Complete the following Python code to cast 2.5 as an integer.",
             "displayText" : "___(2.5)",
             "correctAnswer" : "int",
-            "explanation" : "The Python int() constructor can be used to change the data type of an integer, float, or string literal to an integer."
+            "explanation" : "The Python int() method can be used to return an int object from any number or string."
         },
         {
             "questionType" : "fix_error",
@@ -93,13 +93,14 @@
                 "Dictionary"
             ],
             "correctAnswer" : "Set",
-            "explanation" : "The set data type in Python is immutable like a tuple but differs in that it is also unordered (thus prohibiting the use of indexing)."
+            "explanation" : "The Set data type in Python is immutable like a tuple but differs in that it is also unordered (thus prohibiting the use of indexing)."
         },
         {
             "questionType" : "fill_blank",
             "questionText" : "Complete the following Python code to execute a for loop a total of 5 times:",
             "displayText" : "for i in range(1,_):",
-            "correctAnswer" : "6"
+            "correctAnswer" : "6",
+            "explanation" : "Using the range(a,b) method with a for loop can be used to iterate on each number in the set of (a,b].\nCalling range(1,6) would iterate a total of five times; once each on the numbers in the set {1, 2, 3, 4, 5} (6 is excluded)."
         },
         {
             "questionType" : "text_input",
@@ -112,7 +113,7 @@
             "questionText" : "The Python foreach loop can be used to iterate on every element within a list.",
             "options" : ["True", "False"],
             "correctAnswer" : "False",
-            "explanation" : "Python does not have a foreach loop but instead allows that functionality using a regular for loop such as 'for element in myList:"
+            "explanation" : "Python does not have a foreach loop but instead allows that functionality using a regular for loop such as 'for element in myList:'"
         },
         {
             "questionType" : "multiple_choice",
@@ -151,13 +152,13 @@
             "questionText" : "The pass keyword in Python is used to stop the current iteration and continue with the next.",
             "options" : ["True","False"],
             "correctAnswer" : "False",
-            "explanation" : "The continue keyword would be used to stop the current iteration but carry on with the next. The pass keyword in Python essentially tells the program to 'do nothing'."
+            "explanation" : "The pass keyword in Python essentially tells the program to 'do nothing'. The continue keyword would be used to stop the current iteration but carry on with the next."
         },
         {
             "questionType" : "text_input",
             "questionText" : "To change a globally defined variable 'x' within a new function, this line must be written before interacting with x:",
             "correctAnswer" : "global x",
-            "explanation" : "The global keyword is used within Python functions to specify that the variable already exists in the global scope rather than creating/changing a new variable of the same name within the function's local scope."
+            "explanation" : "The global keyword is used within Python functions to specify that the proceeding variable already exists in the global scope. Without this keyword, declaring/assigning a variable would create it in the function's local scope and not change the value of that in the global scope."
         }
     ]
 }
